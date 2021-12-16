@@ -12,6 +12,11 @@ struct ModbusHandler modbus_handler = {
     .local_address = 0X01,
 };
 
+<<<<<<< HEAD
+=======
+uint16_t it_count = 0;
+
+>>>>>>> e80b9dbf208d8e1d2baf7444ecfd8c25e066535d
 HAL_StatusTypeDef Modbus_init(void)
 {
     HAL_StatusTypeDef ret_val = HAL_OK;
@@ -67,6 +72,10 @@ void USART1_IRQHandler(void)
         modbus_handler.buf_receiving->receive_count = modbus_handler.buf_receiving->buffer_length - temp;
 
         DMA_switch_buffer();
+<<<<<<< HEAD
+=======
+        it_count++;
+>>>>>>> e80b9dbf208d8e1d2baf7444ecfd8c25e066535d
     }
     HAL_UART_IRQHandler(&modbus_huart);
 }
